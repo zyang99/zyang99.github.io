@@ -39,6 +39,11 @@ myButton.onclick = function(){
     setUsername();
 }
 
+//跳转猜数字游戏界面
+let guessButton = document.querySelector(".guess-number");
+guessButton.onclick = function(){
+    location.href= "guess-number.html";
+}
 
 // let myHtml = document.querySelector('html');
 // myHtml.onclick = function(){
