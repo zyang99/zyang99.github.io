@@ -56,8 +56,21 @@ let guessButton = document.querySelector(".guess-number");
 //只有点击按钮才会跳转
 //guessButton.onclick = jump;
 function jump(){
-    location.href= "guess-number.html";
+    location.href = "guess-number.html";
 }
 //另外一种方式
 guessButton.addEventListener('click',jump);
 //#########所以没有参数的函数调用上面都可以选择，但是有参数调用的函数使用匿名函数的方式来进行调用
+
+/**
+ * -------彩色弹球
+ */
+let colorBallButton = document.querySelector(".colorBall");
+colorBallButton.onclick = function(){
+    location.href = "colorball.html";
+}
+
+/**
+ * -----轮播图
+ */
+let photoButton = document.querySelector(".photo");
