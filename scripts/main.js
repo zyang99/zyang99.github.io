@@ -59,5 +59,5 @@ function jump(){
     location.href= "guess-number.html";
 }
 //另外一种方式
-//guessButton.addEventListener('click',jump);
+guessButton.addEventListener('click',jump);
 //#########所以没有参数的函数调用上面都可以选择，但是有参数调用的函数使用匿名函数的方式来进行调用
