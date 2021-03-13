@@ -13,10 +13,10 @@ let myImage = document.querySelector('img');
 myImage.onclick = function(){
     //获取img的属性值src
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/joker.png'){
+    if(mySrc === 'images/me.png'){
         myImage.setAttribute('src','images/Tom.jpg');
     }else{
-        myImage.setAttribute('src','images/joker.png');
+        myImage.setAttribute('src','images/me.png');
     }
 }
 
