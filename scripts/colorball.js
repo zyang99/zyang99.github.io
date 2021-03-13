@@ -75,7 +75,7 @@ Ball.prototype.update = function(){
 //小球碰撞改变颜色
 Ball.prototype.punChangeColor = function(){
     for (let j = 0;j<balls.length;j++){  //检查当前小球是否和其他小球碰撞。 balls是在后面设置的存储小球的数组 函数外创建，全局使用
-        if(this != balls[j]){  
+        if(this != balls[j] && this.exists && balls[j].exists){  
             const dx = this.x-balls[j].x;
             const dy = this.y-balls[j].y;
             const distance = Math.sqrt(dx*dx+dy*dy);        //计算两个球圆心的距离
