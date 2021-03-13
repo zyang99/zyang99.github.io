@@ -2,8 +2,27 @@
  * -----图片库
  */
 
+const displayedImg =document.querySelector('.displayed-img');
+const thumbBar = document.querySelector('.thumb-bar');
+
  const myButton = document.querySelector('button');
  const overlayDiv = document.querySelector('.overlay');
+
+for(let i=1; i<=5; i++){
+    const newImg = document.createElement('img');
+    newImg.setAttribute('src','images/'+i+'.jpg');
+    thumbBar.appendChild(newImg);
+    newImg.onclick = function(){
+        displayedImg.setAttribute('src',this.getAttribute('src'));
+    }
+    /**这样也可以
+    newImg.onclick = function(e){
+        displayedImg.src = e.target.src;
+    } 
+
+     */
+}
+
  //点击按钮变暗
  function darkOrLight(){
      if(myButton.getAttribute('class')==='dark'){

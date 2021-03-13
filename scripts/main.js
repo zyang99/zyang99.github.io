@@ -74,3 +74,6 @@ colorBallButton.onclick = function(){
  * -----轮播图
  */
 let photoButton = document.querySelector(".photo");
+photoButton.onclick = function(){
+    location.href = "photo.html";
+}
