@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个性名片</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    body {
+      background-color: rgb(250, 220, 245);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 外层容器 wrap */
+    .wrap {
+      position: relative;
+      width: 530px;
+      height:360px;
+      background-color: white;
+      box-shadow: 0 0 10px black;
+      overflow: hidden;
+      border-radius: 0 0 30px 30px;
+    }
+
+    /* 上部分块 box-top */
+    .box-top {
+      position: relative;
+      width: 530px;
+      height: 130px;
+      background-color: rgb(180, 180, 210);
+      display: flex;
+      justify-content: center;
+      transition: .5s;
+    }
+    .box-top::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      clip-path: polygon(50% 40%, 0 0, 100% 0);
+      background-color: rgb(180, 180, 210);
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: -38px;
+      z-index: 999;
+    }
+    .image {
+      position: absolute;
+      top: 10px;
+      width: 100px;
+      height: 100px;
+      background-image: url('../images/me.png');
+      border: 5px solid rgb(140, 140, 170);
+      background-size: cover;
+      transition: .5s;
+    }
+
+    /* 下部分块 box-bottom box-bottom2 */
+    .box-bottom,
+    .box-bottom2 {
+      position: absolute;
+      top: 130px;
+      width: 530px;
+      height: 330px;
+      text-align: center;
+      transition: .5s;
+    }
+    .box-bottom h2 {
+      display: block;
+      margin: 60px 0 10px 0;
+      font: 800 30px 'Bauhaus 93';
+    }
+    .box-bottom span {
+      font: 400 28px 'Blackadder ITC';
+    }
+    .box-bottom h2::after {
+      content: '';
+      display: block;
+      width: 200px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 4px)
+    }
+
+    /* 下部分的块 box-bottom2 */
+    .box-bottom2 {
+      top: 300px;
+      height: 220px;
+    }
+    .box-bottom2 li {
+      margin: 55px;
+      font: 800 30px 'Bernard MT Condensed';
+      transition: .5s;
+    }
+
+    /* 鼠标移入的效果图 */
+    .wrap:hover .box-top {
+      height: 70px;
+    }
+    .wrap:hover .image {
+      width: 50px;
+      height: 50px;
+      border-width: 3px;
+      transform: translate(-220px, -5px);
+    }
+    .wrap:hover .box-bottom {
+      top: 300px;
+    }
+    .wrap:hover .box-bottom2 {
+      top: 50px;
+    }
+    li:hover {
+      color: rgb(100, 160, 160);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 个性名片 -->
+  <div class="wrap">
+    <div class="box-top">
+      <div class="image"></div>
+    </div>
+    <div class="box-bottom">
+      <h2>from ZY to future</h2>
+      <span>hope is a good thing</span>
+    </div>
+    <div class="box-bottom2">
+      <ul>
+        <li>QQ:1402687676</li>
+        <li>WX:xxxzy9(二月山水贵)</li>
+        <li>github:zyang99.github.com</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

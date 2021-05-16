@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视觉差名片</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgb(155, 192, 228);
+    }
+    .a{
+      position: relative;
+      top: 200px;
+      width: 1000px;
+      height: 600px;
+      background-image: url(../images/7.jpg);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .b,
+    .c,
+    .d,
+    .e{
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      /* 设置阴影 */
+      filter: drop-shadow(4px 4px 12px rgba(0,0,0,.5));
+      opacity: 1;
+      transition: 1s;
+    }
+    .b::after,
+    .c::after,
+    .d::after,
+    .e::after{
+      content: '';
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      /* background-color: white; */
+      background-image: url(../images/7.jpg);
+      background-size:cover; 
+    }
+    .b{
+      left: -400px;
+      transform: rotateZ(100deg);
+      overflow: hidden;
+    }
+    .b::after{
+      transform: rotateZ(-100deg);
+    }
+
+    .c{
+      left: -400px;
+      transform: rotate(-100deg);
+      overflow: hidden;
+    }
+    .c::after{
+      transform: rotate(100deg);
+    }
+
+    .d{
+      right: -400px;
+      transform: rotateZ(100deg);
+      overflow: hidden;
+    }
+    .d::after{
+      transform: rotateZ(-100deg);
+    }
+
+    .e{
+      right: -400px;
+      transform: rotateZ(-100deg);
+      overflow: hidden;
+    }
+    .e::after{
+      transform: rotateZ(100deg);
+    } 
+    
+    .f{
+      opacity: 0;
+      font: 900 40px 'Bauhaus 93';
+      letter-spacing: 5px;
+      color: rgb(9, 174, 196);
+      transition: 1.5s;
+      z-index: 999;
+    }
+
+    .a:hover .b{
+      left:-580px
+    }
+    .a:hover .c{
+      left:-630px
+    }
+
+    .a:hover .d{
+      right:-580px
+    }
+    .a:hover .e{
+      right:-630px
+    }
+    .a:hover .f{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div class="e"></div>
+    <p class="f">HOPE IS A GOOD THING </p>
+  </div>
+</body>
+</html>

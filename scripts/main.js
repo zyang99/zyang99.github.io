@@ -56,7 +56,7 @@ let guessButton = document.querySelector(".guess-number");
 //只有点击按钮才会跳转
 //guessButton.onclick = jump;
 function jump(){
-    location.href = "guess-number.html";
+    location.href = "./view/guess-number.html";
 }
 //另外一种方式
 guessButton.addEventListener('click',jump);
@@ -67,7 +67,7 @@ guessButton.addEventListener('click',jump);
  */
 let colorBallButton = document.querySelector(".colorBall");
 colorBallButton.onclick = function(){
-    location.href = "colorball.html";
+    location.href = "./view/colorball.html";
 }
 
 /**
@@ -75,5 +75,35 @@ colorBallButton.onclick = function(){
  */
 let photoButton = document.querySelector(".photo");
 photoButton.onclick = function(){
-    location.href = "photo.html";
+    location.href = "./view/photo.html";
+}
+/**
+ * ---个性名片
+ */
+document.querySelector('.personalintroduce').onclick = function(){
+    location.href = './view/personalintro.html'
+}
+
+/**
+ * ----视觉差名片
+ */
+document.querySelector('.poorvision').onclick = function(){
+    location.href = './view/poorvision.html'
+}
+document.querySelector('.poorvision2').onclick = function(){
+    location.href = './view/poorvision2.html'
+}
+
+/*
+* ---灯泡字体效果
+*/
+document.querySelector('.dpz').onclick = function(){
+    location.href = './view/dpz.html'
+}
+
+/*
+* ---搜索框
+*/
+document.querySelector('.search').onclick = function(){
+    location.href = './view/search.html'
 }

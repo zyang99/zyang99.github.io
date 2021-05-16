@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>视觉差名片2</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgb(54, 60, 77);
+    }
+    .a{
+      position: relative;
+      top: 200px;
+      width: 1000px;
+      height: 600px;
+      background-image: url(../images/6.jpg);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .b,
+    .c,
+    .d,
+    .e{
+      position: absolute;
+      width: 340px;
+      height: 600px;
+      /* 设置阴影 */
+      filter: drop-shadow(4px 4px 12px rgba(0,0,0,.5));
+      opacity: 1;
+      transition: 1s;
+      overflow: hidden;
+    }
+    .b,.c{
+      left: 0;
+    }
+    .d,.e{
+      right: 0;
+    }
+
+    .b::after,
+    .c::after,
+    .d::after,
+    .e::after{
+      content: '';
+      position: absolute;
+      width: 1000px;
+      height: 600px;
+      /* background-color: white; */
+      background-image: url(../images/6.jpg);
+      background-size:cover; 
+    }
+    .d::after,
+    .e::after{ 
+      left:-660px;
+    }
+    
+    .f{
+      opacity: 0;
+      font: 900 40px 'Bauhaus 93';
+      letter-spacing: 5px;
+      color: rgb(9, 174, 196);
+      transition: 1.5s;
+      z-index: 999;
+    } 
+
+    .a:hover .b{
+      left:-100px
+    }
+    .a:hover .c{
+      left:-200px
+    }
+
+    .a:hover .d{
+      right:-100px
+    }
+    .a:hover .e{
+      right:-200px
+    }
+    .a:hover .f{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <div class="b"></div>
+    <div class="c"></div>
+    <div class="d"></div>
+    <div class="e"></div>
+    <p class="f">HOPE IS A GOOD THING </p>
+  </div>
+</body>
+</html>
