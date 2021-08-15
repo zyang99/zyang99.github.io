@@ -107,3 +107,17 @@ document.querySelector('.dpz').onclick = function(){
 document.querySelector('.search').onclick = function(){
     location.href = './view/search.html'
 }
+
+/*
+* ---键盘图
+* */
+document.querySelector('.keyboard').onclick = function (){
+    location.href = './view/key.html'
+}
+
+/*
+* ---回到顶部 只用js实现
+* */
+document.querySelector('.BacktoTop').onclick = function (){
+    location.href = './view/backtoTop.html'
+}
