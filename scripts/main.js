@@ -121,3 +121,10 @@ document.querySelector('.keyboard').onclick = function (){
 document.querySelector('.BacktoTop').onclick = function (){
     location.href = './view/backtoTop.html'
 }
+
+/*
+* ---打开个人简历
+* */
+document.querySelector('.cv').onclick = function (){
+    location.href = './view/cv.html'
+}
