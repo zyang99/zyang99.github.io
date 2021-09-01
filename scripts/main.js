@@ -1,47 +1,47 @@
-let myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+// let myHeading = document.querySelector('h1');
+// myHeading.textContent = 'Hello world!';
 
-// function multiply(num1,num2){
-//     let result = num1 * num2;
-//     return result;
+// // function multiply(num1,num2){
+// //     let result = num1 * num2;
+// //     return result;
+// // }
+
+// /**
+//  * -----------点击图片切换图片
+//  */
+// let myImage = document.querySelector('img');
+// myImage.onclick = function(){
+//     //获取img的属性值src
+//     let mySrc = myImage.getAttribute('src');
+//     if(mySrc === 'images/me.png'){
+//         myImage.setAttribute('src','images/Tom.jpg');
+//     }else{
+//         myImage.setAttribute('src','images/me.png');
+//     }
 // }
 
-/**
- * -----------点击图片切换图片
- */
-let myImage = document.querySelector('img');
-myImage.onclick = function(){
-    //获取img的属性值src
-    let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/me.png'){
-        myImage.setAttribute('src','images/Tom.jpg');
-    }else{
-        myImage.setAttribute('src','images/me.png');
-    }
-}
-
-/**
- * ------进入用户名欢迎（输入校准）
- */
-let myButton = document.querySelector('button');
-function setUsername(){
-    let myName = prompt('输入名字');
-    if(myName===null || !myName){
-        setUsername();
-    }else{
-        localStorage.setItem('name',myName);
-        myHeading.textContent = myName + '重头再来';    
-    }
-}
-if(!localStorage.getItem('name')){
-    setUsername();
-}else{
-    let storedName = localStorage.getItem('name');
-    myHeading.textContent = storedName + '重头再来';
-}
-myButton.onclick = function(){
-    setUsername();
-}
+// /**
+//  * ------进入用户名欢迎（输入校准）
+//  */
+// let myButton = document.querySelector('button');
+// function setUsername(){
+//     let myName = prompt('输入名字');
+//     if(myName===null || !myName){
+//         setUsername();
+//     }else{
+//         localStorage.setItem('name',myName);
+//         myHeading.textContent = myName + '重头再来';    
+//     }
+// }
+// if(!localStorage.getItem('name')){
+//     setUsername();
+// }else{
+//     let storedName = localStorage.getItem('name');
+//     myHeading.textContent = storedName + '重头再来';
+// }
+// myButton.onclick = function(){
+//     setUsername();
+// }
 
 /**
  * -------跳转猜数字游戏界面
@@ -127,4 +127,18 @@ document.querySelector('.BacktoTop').onclick = function (){
 * */
 document.querySelector('.cv').onclick = function (){
     location.href = './view/cv.html'
+}
+
+/*
+* ---时钟
+* */
+document.querySelector('.clock').onclick = function (){
+    location.href = './view/clock.html'
+}
+
+/*
+* ---滑动遮罩
+* */
+document.querySelector('.compare').onclick = function (){
+    location.href = './view/compare.html'
 }
